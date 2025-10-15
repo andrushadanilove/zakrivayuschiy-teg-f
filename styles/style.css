@@ -1,7 +1,6 @@
 .page {
-  overflow-x: hidden;
   font-family: var(--main-font, sans-serif);
-  font-weight: var(--main-font-weight, 410);
+  font-variation-settings: "wght" var(--main-font-weight);
   font-size: var(--text-base);
   background-image: var(--gradient);
   background-size: cover;
@@ -24,6 +23,7 @@
 
 .header__title {
   margin-bottom: 20px;
+  text-transform: uppercase;
   font-weight: 400;
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   line-height: 100%;
@@ -53,6 +53,7 @@
 
 .card__container-title {
   display: flex;
+  border-bottom: 2px solid var(--secondary-color, #000);
   align-items: center;
   min-height: 30px;
   padding: 4px 10px;
@@ -237,20 +238,6 @@
   font-size: 14px;
   line-height: 0.9;
 }
-.sparks {
-  opacity: 0;
-}
-
-.contour {
-  transition: fill 0.1s linear;
-}
-.core {
-  transition: fill 0.3s linear 0.03s;
-}
-
-.main-body {
-  transition: fill 0.3s linear;
-}
 
 .popup {
   position: fixed;
@@ -303,10 +290,6 @@
 @media (width <= 375px) {
   .main {
     margin-top: 100px;
-  }
-
-  .card__footer {
-    padding-top: 27px;
   }
 
   .card__container-images {

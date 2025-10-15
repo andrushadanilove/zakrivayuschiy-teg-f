@@ -1,19 +1,39 @@
+.like-icon {
+  transform-origin: center;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  transition: fill 0.1s linear 0s;
+}
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear 0s;
+}
+
 .like-icon:hover .core {
-  fill: var(--color-secondary);
+  fill: var(--secondary-color);
   transition: fill 0.3s linear 0s;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--color-secondary);
+  fill: var(--secondary-color);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon:active {
   border: transparent;
 }
+
 .like-icon:active .core {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0s;
 }
 
 .like-icon:active .main-body {
@@ -24,7 +44,7 @@
 
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0s;
 }
 
 .like-icon.is-liked .main-body {
